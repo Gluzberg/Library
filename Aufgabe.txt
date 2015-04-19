@@ -1,0 +1,19 @@
+aufgabe
+es geht darum eine listen- und detail-ansicht für bücher zu entwerfen.
+datenquelle ist ein xml:
+https://msdn.microsoft.com/en-us/library/ms762271(v=vs.85).aspx
+
+das xml wird initial eingelesen, danach soll mit buchobjekten im speicher gearbeitet werden
+
+man soll die bücher ausleihen können. 
+dazu soll es eine klasse person geben.
+
+in der listenansicht ist einsehbar, ob ein buch ausgeliehen ist.
+in der dateil-ansicht ist auch sichtbar, wer das buch ausgeliehen hat
+
+vorgaben:
+* als UI pattern kann MVC oder webforms genutzt werden.
+* wie die masken/seiten aussehen spielt keine rolle. sie müssen kein css /js entwerfen
+* es ist keine datenbank schicht nötig
+* denken sie daran businesslogik, daten und UI zu trennen
+* machen sie ihren code möglichst wartbar, erweiterbar und wiederverwendbar

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Library.Models.Borrowing>
+
+<fieldset>
+    <legend>Borrowing History</legend>
+
+
+    @if (Model.Count() == 0)
+    {
+        @Helpers.listEmpty()
+    }
+    else
+    {
+
+        <table>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.book.title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.start_date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.end_date)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Helpers.bookLink(item.book)
+                    </td>
+                    <td align="center">
+                        @Html.DisplayFor(modelItem => item.start_date)
+                    </td>
+                    <td align="center">
+                        @Helpers.endBorrowing(item, @Html.DisplayFor(modelItem => item.end_date))
+                    </td>
+                </tr>
+            }
+
+        </table>
+    }
+
+</fieldset>

@@ -1,0 +1,19 @@
+﻿@model Library.Models.Person
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Sind Sie sicher, dass Sie dieses Person entfernen möchten?</h3>
+
+@Html.Partial("Partial/_details", Model)
+
+<h4>This actiton will also delete the entire borrowing history of this book</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Helpers.deleteActions(new { id = Model.id })
+}

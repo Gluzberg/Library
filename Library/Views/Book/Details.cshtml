@@ -1,0 +1,30 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+
+@Html.Partial("Partial/_details", Model)
+
+<fieldset>
+    <legend>Ausleihen</legend>
+    @if (Model.isAvaliable)
+    {
+         @Html.ActionLink("Ausleihen dieses Buch", "Borrow", new { id = Model.id })
+    }
+    else
+    {
+         @Html.Label("Dieses Buch ist Zurzeit nicht verfügbar")
+    }
+</fieldset>
+
+@Html.Partial("../Borrowing/DetailsPerBook", Model.borrowings)
+     
+
+@Helpers.detailsActions(new { id = Model.id })
+
+
+

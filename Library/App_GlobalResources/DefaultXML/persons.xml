@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<people>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="prdc364608-a88c-4110-9542-7804038baa65">
+    <first_name>Nino</first_name>
+    <last_name>Bauer</last_name>
+    <member_since>2015-04-18T16:36:07.2642295+02:00</member_since>
+  </person>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="pr13476097-3dc0-4ec8-a232-1e7797c46c99">
+    <first_name>Thomas</first_name>
+    <last_name>Bauer</last_name>
+    <member_since>2015-04-18T16:36:28.0037018+02:00</member_since>
+  </person>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="prd3427408-b507-4e2c-951e-53aedf04b701">
+    <first_name>Martin</first_name>
+    <last_name>Reichert</last_name>
+    <member_since>2015-04-18T16:36:44.8400678+02:00</member_since>
+  </person>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="pr9a816175-f5e4-4edf-85bb-66b12a81a044">
+    <first_name>Manfred</first_name>
+    <last_name>Holzbauer</last_name>
+    <member_since>2015-04-18T16:37:03.4881589+02:00</member_since>
+  </person>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="prddd44940-760c-40bf-849a-85b1dc2fd15e">
+    <first_name>Andrea</first_name>
+    <last_name>Müller</last_name>
+    <member_since>2015-04-18T16:37:14.7174581+02:00</member_since>
+  </person>
+  <person xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="pra9e327c3-494d-46a7-acb5-be0d2e8ed4d7">
+    <first_name>Nadine</first_name>
+    <last_name>Eisen</last_name>
+    <member_since>2015-04-18T16:37:24.4559058+02:00</member_since>
+  </person>
+</people>

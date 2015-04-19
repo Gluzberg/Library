@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Library.Models.Person>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+    <fieldset>
+        <legend>Hinzufügen</legend>
+        @Html.ActionLink("Neue Person", "Create")
+    </fieldset>
+
+    <fieldset>
+        <legend>People List</legend>
+
+        @if (Model.Count() == 0)
+        {
+            @Helpers.listEmpty()
+        }
+        else
+        {
+
+            <h4>Click on name for further details and borrowing options</h4>
+
+            <table>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.fullName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.memberSince)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.ActionLink(item.fullName, "Details", new { id = item.id })
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.memberSince)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        }
+    </fieldset>
+

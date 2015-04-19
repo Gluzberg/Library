@@ -1,0 +1,26 @@
+﻿@model Library.Models.Person
+
+<fieldset>
+    <legend>Person-Details</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.firstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.firstName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.lastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lastName)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.memberSince)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.memberSince)
+    </div>
+</fieldset>

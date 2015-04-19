@@ -1,0 +1,18 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewBag.Title = "Bearbeiten";
+}
+
+<h2>Bearbeiten</h2>
+
+@using (Html.BeginForm()) {
+    
+    @Html.Partial("Partial/_edit", Model)
+    @Helpers.editActions(new { id = Model.id })
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

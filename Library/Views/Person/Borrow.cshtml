@@ -1,0 +1,20 @@
+﻿@model Library.Models.Person
+
+@{
+    ViewBag.Title = "Borrow";
+}
+
+<h2>Borrow</h2>
+
+@Html.Partial("Partial/_details", Model)
+
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("Partial/_borrow", Model)
+    @Helpers.borrowActions(new { id = Model.id })
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

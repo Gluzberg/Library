@@ -1,0 +1,33 @@
+﻿@model Library.Models.State
+
+<fieldset>
+    <legend>Configuration & Session Info</legend>
+
+    <div class="display-labellong">
+        @Html.DisplayNameFor(model => model.DataStorage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataStorage)
+    </div>
+
+    <div class="display-labellong">
+        @Html.DisplayNameFor(model => model.DataSource)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataSource)
+    </div>
+
+    <div class="display-labellong">
+         @Html.DisplayNameFor(model => model.MaxBookPerPerson)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.MaxBookPerPerson)
+    </div>
+
+    <div class="display-labellong">
+        @Html.DisplayNameFor(model => model.DataExpiration)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataExpiration)
+    </div>
+</fieldset>

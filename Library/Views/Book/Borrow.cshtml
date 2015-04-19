@@ -1,0 +1,21 @@
+﻿@model Library.Models.Book
+
+@{
+    ViewBag.Title = "Ausleihen";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+@Html.Partial("Partial/_details", Model)
+
+@using (Html.BeginForm())
+{
+    @Html.Partial("Partial/_borrow", Model)
+
+    @Helpers.borrowActions(new { id = Model.id })
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

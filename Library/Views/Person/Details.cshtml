@@ -1,0 +1,26 @@
+﻿@model Library.Models.Person
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+@Html.Partial("Partial/_details", Model)
+
+<fieldset>
+    <legend>Borrow a book</legend>
+    @if (Model.canBorrow)
+    {
+        @Html.ActionLink("Borrow a book", "Borrow", new { id = Model.id })
+    }
+    else
+    {
+        @Html.Label("This person has currently too many books")
+    }
+</fieldset>
+
+
+@Html.Partial("../Borrowing/DetailsPerPerson", Model.borrowings)
+
+@Helpers.detailsActions(new { id = Model.id })

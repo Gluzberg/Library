@@ -1,0 +1,133 @@
+﻿@using System.Web.Mvc
+
+@functions { public static System.Web.Mvc.HtmlHelper<object> Html = ((System.Web.Mvc.WebViewPage)WebPageContext.Current.Page).Html; }
+
+@helper ActionLink(string linkText, string actionName)
+{
+    @ActionLink(linkText, actionName, new object())
+}
+
+@helper ActionLink(string linkText, string actionName, object routeValues)
+{
+    @System.Web.Mvc.Html.LinkExtensions.ActionLink(
+      ((System.Web.Mvc.WebViewPage)CurrentPage).Html, linkText, actionName, routeValues)
+}
+
+
+@helper Label(string expression)
+{
+    @System.Web.Mvc.Html.LabelExtensions.Label(((System.Web.Mvc.WebViewPage)CurrentPage).Html, expression)
+}
+
+
+
+
+
+
+@helper bookLink(Library.Models.Book item)
+{
+    @ActionLink(item.title, "../Book/Details", new { id = item.id })
+}
+
+@helper personLink(Library.Models.Person item)
+{
+    @ActionLink(item.fullName, "../Person/Details", new { id = item.id })
+}
+
+@helper endBorrowing(Library.Models.Borrowing item, MvcHtmlString label)
+{
+    if (item.end_date < DateTime.Now)
+    {
+        @label
+    }
+    else
+    {
+        @ActionLink("Rückgabe", "Return", new { borrow_id = item.id, book_id = item.book_id, person_id = item.person_id })
+    }
+}
+
+@helper listEmpty()
+{
+    @Label("Derzeit noch leer")
+}
+
+
+@helper detailsActions(object routeValues)
+{
+    <p>
+        @ActionLink("Bearbeiten", "Edit", routeValues) |
+        @ActionLink("Entfernen", "Delete", routeValues) |
+        @ActionLink("Zurück zur Liste", "Index")
+    </p>
+}
+
+
+@helper createActions()
+{
+    @Helpers.error()
+
+    <p>
+        <input type="submit" value="Create" /> |
+        @ActionLink("Zurück zur Liste", "Index")
+    </p>
+}
+
+@helper editActions(object routeValues)
+{
+    @Helpers.error()
+
+    <p>
+        <input type="submit" value="Speicher" />  |
+        @ActionLink("Zurüch zur Details", "Details", routeValues)
+    </p>
+}
+
+@helper deleteActions(object routeValues) 
+{
+    @Helpers.error()
+
+    <p>
+        <input type="submit" value="Entfernen" /> |
+        @ActionLink("Zurüch zur Details", "Details", routeValues)
+    </p>
+}
+
+@helper borrowActions(object routeValues)
+{
+    @Helpers.error()
+
+    <div>
+        <input type="submit" value="Ausleihen" /> |
+        @ActionLink("Zurüch zur Details", "Details", routeValues)
+    </div>
+}
+
+@helper error() 
+{
+    var p = (System.Web.Mvc.WebViewPage)PageContext.Page;
+    var vb = p.ViewBag;
+    var error = ((System.Web.Mvc.WebViewPage)CurrentPage).Html.ViewContext.Controller.TempData["Error"];  //vb.Error;
+
+    if (error != null && error is bool)
+    { 
+        error = "FEHLER";
+    }
+    else if (error == null || !(error is String))
+    {
+        error = "";
+    }
+            
+    <div class="error-label"> @Label((String)error)</div>
+}
+
+@helper listTable(System.Collections.IEnumerable model, MvcHtmlString table)
+{
+    if (Model.Count() == 0)
+    {
+        @Label("Derzeit noch leer")
+    }
+    else
+    {
+        @table
+    }
+}

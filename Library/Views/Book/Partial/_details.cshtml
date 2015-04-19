@@ -1,0 +1,47 @@
+﻿@model Library.Models.Book
+
+<fieldset>
+    <legend>Buch-Details</legend>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.author)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.author)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.title)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.title)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.genre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.genre)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.publishDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.publishDate)
+    </div>
+
+    <div class="display-label">
+        @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+</fieldset>

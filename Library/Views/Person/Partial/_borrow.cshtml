@@ -1,0 +1,13 @@
+﻿@model Library.Models.Person
+
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
+    <fieldset>
+        <legend>Select Avaliable Book</legend>
+        <div class="editor">
+            @Html.Label("Book")
+            @Html.DropDownList("Borrowed", String.Empty)
+        </div>
+    </fieldset>

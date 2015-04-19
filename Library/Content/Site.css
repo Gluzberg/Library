@@ -1,0 +1,101 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.display-label {
+    float: left;
+    width: 100px;   
+    text-align: left; 
+    font-weight: bold;
+}
+
+.display-labellong {
+    float: left;
+    width: 200px;   
+    text-align: left; 
+    font-weight: bold;
+}
+
+
+.error-label {
+    height:30px;
+    font-weight: bold; 
+    color: red;
+}
+
+.display-field {
+    margin: 0 0 0 10px; 
+}
+
+
+
+
+ .editor label {
+    float: left;
+    width: 100px;   
+    text-align: left; 
+    font-weight: bold;
+}
+
+.editor field {
+    width: 80px; 
+    font-weight: bold;
+    margin: 0 0 0 10px; 
+}
+
+.editor-field textarea {
+    width : 400px;
+    height : 100px;
+}
+
+
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
