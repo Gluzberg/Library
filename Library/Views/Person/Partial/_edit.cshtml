@@ -4,9 +4,7 @@
 @Html.ValidationSummary(true)
 
 <fieldset>
-    <legend>Person</legend>
-
-    @Html.HiddenFor(model => model.id)
+    <legend>Person-Details</legend>
 
     <div class="editor-label">
         @Html.LabelFor(model => model.firstName)
@@ -24,7 +22,4 @@
         @Html.ValidationMessageFor(model => model.lastName)
     </div>
 
-    <p>
-        <input type="submit" value="Save" />
-    </p>
 </fieldset>

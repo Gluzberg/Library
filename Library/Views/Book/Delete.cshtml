@@ -12,8 +12,6 @@
 
 <h4>Durch diese Acktion wird ebenfalls der Ausleihverlauf des Buches entfernt.</h4>
  
-@Helpers.error()
-
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Helpers.deleteActions(new { id = Model.id })

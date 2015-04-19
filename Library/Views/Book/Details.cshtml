@@ -4,7 +4,7 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<h2>@ViewBag.Title</h2>
 
 
 @Html.Partial("Partial/_details", Model)
@@ -17,7 +17,7 @@
     }
     else
     {
-         @Html.Label("Dieses Buch ist Zurzeit nicht verfügbar")
+         @Html.Label("Dieses Buch ist zurzeit nicht verfügbar")
     }
 </fieldset>
 

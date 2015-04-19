@@ -21,9 +21,6 @@
 
 
 
-
-
-
 @helper bookLink(Library.Models.Book item)
 {
     @ActionLink(item.title, "../Book/Details", new { id = item.id })
@@ -67,7 +64,7 @@
     @Helpers.error()
 
     <p>
-        <input type="submit" value="Create" /> |
+        <input type="submit" value="Speichern" /> |
         @ActionLink("Zurück zur Liste", "Index")
     </p>
 }
@@ -77,7 +74,7 @@
     @Helpers.error()
 
     <p>
-        <input type="submit" value="Speicher" />  |
+        <input type="submit" value="Speichern" />  |
         @ActionLink("Zurüch zur Details", "Details", routeValues)
     </p>
 }
