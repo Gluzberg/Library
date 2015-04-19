@@ -153,7 +153,7 @@
     <Compile Include="Services\Services\BookService.cs" />
     <Compile Include="Services\Interfaces\IPersonService.cs" />
     <Compile Include="Services\Interfaces\IBookService.cs" />
-    <Compile Include="Services\Factories\BookControllerFactory.cs" />
+    <Compile Include="Controllers\Factories\LibraryControllerFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\DefaultXML\books.xml">

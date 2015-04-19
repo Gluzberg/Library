@@ -106,7 +106,7 @@
 {
     var p = (System.Web.Mvc.WebViewPage)PageContext.Page;
     var vb = p.ViewBag;
-    var error = ((System.Web.Mvc.WebViewPage)CurrentPage).Html.ViewContext.Controller.TempData["Error"];  //vb.Error;
+    var error = ((System.Web.Mvc.WebViewPage)CurrentPage).Html.ViewContext.Controller.TempData["Error"];  
 
     if (error != null && error is bool)
     { 
@@ -120,14 +120,15 @@
     <div class="error-label"> @Label((String)error)</div>
 }
 
-@helper listTable(System.Collections.IEnumerable model, MvcHtmlString table)
+@helper checkSession() 
 {
-    if (Model.Count() == 0)
+    if (Session["Key"] != null)
     {
-        @Label("Derzeit noch leer")
+        var v = Session["Key"];
     }
     else
     {
-        @table
+        Session["Key"] = DateTime.Now.ToShortTimeString();
+        Library.MvcApplication.initSession();
     }
 }

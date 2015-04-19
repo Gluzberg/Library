@@ -9,14 +9,14 @@
 @Html.Partial("Partial/_details", Model)
 
 <fieldset>
-    <legend>Borrow a book</legend>
+    <legend>Ausleihen</legend>
     @if (Model.canBorrow)
     {
-        @Html.ActionLink("Borrow a book", "Borrow", new { id = Model.id })
+        @Html.ActionLink("Buch ausleihen", "Borrow", new { id = Model.id })
     }
     else
     {
-        @Html.Label("This person has currently too many books")
+        @Html.Label("Diese Person This person has currently too many books")
     }
 </fieldset>
 

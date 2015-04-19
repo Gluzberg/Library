@@ -9,6 +9,7 @@ using System.Web.Routing;
 using Library.Services;
 using System.Diagnostics;
 using Library.Configurations;
+using Library.Controllers;
 
 namespace Library
 {
@@ -19,7 +20,7 @@ namespace Library
     {
         protected void Application_Start()
         {
-            Debug.WriteLine("A: Application_Start()");
+            Debug.WriteLine(DateTime.Now.ToShortTimeString() + " Application_Start");
 
             AreaRegistration.RegisterAllAreas();
 
@@ -41,15 +42,21 @@ namespace Library
 
         protected void Session_Start(Object sender, EventArgs e)
         {
+            Debug.WriteLine(DateTime.Now.ToShortTimeString() + " Start_Session");
+
             // init repositoroes HERE if we are using session_cache for storage
 
+            initSession();
+        }
+
+
+        public static void initSession() 
+        {
             if (Configuration.usingSessionCashe)
             {
                 Models.State.StartSession();
                 RepositoriesInit.Init();
             }
         }
-
-
     }
 }

@@ -12,7 +12,7 @@ using Library.Controllers;
 using System.Reflection;
 using System.Diagnostics;
 
-namespace Library.Services
+namespace Library.Controllers
 {
     public class LibraryControllerFactory : DefaultControllerFactory
     {
@@ -36,8 +36,6 @@ namespace Library.Services
                 return base.CreateController(requestContext, controllerName);
             }
         }
-
-
     }
 
 
@@ -45,8 +43,7 @@ namespace Library.Services
     {
         public static IControllerFactory GetControllerFactory()
         {
-            IControllerFactory factory = new LibraryControllerFactory();
-            return factory;
+            return new LibraryControllerFactory();
         }
     }
 

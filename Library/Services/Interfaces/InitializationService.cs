@@ -48,7 +48,7 @@ namespace Library.Services
 
             KeyExtractor<T> keyExtractor = new KeyExtractor<T>();
 
-            foreach (T item in MainRepository.SelectAll())
+            foreach (T item in new List<T>(MainRepository.SelectAll()))
             {
                 MainRepository.Delete(keyExtractor.KeyValues(item));
             }

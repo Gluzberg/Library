@@ -44,11 +44,11 @@ namespace Library.Models
         {
             get
             {
-                return (int)Math.Round(SessionEnd.Subtract(DateTime.Now).TotalMinutes, 0);
+                return Math.Max(0,(int)Math.Round(SessionEnd.Subtract(DateTime.Now).TotalMinutes, 0));
             }
         }
 
-        [DisplayName("Datenlagerung")]
+        [DisplayName("Datenspeicherung")]
         public String DataStorage
         {
             get
@@ -57,7 +57,7 @@ namespace Library.Models
             }
         }
 
-        [DisplayName("Datenquelem")]
+        [DisplayName("Datenquelle")]
         public String DataSource
         {
             get
@@ -75,11 +75,12 @@ namespace Library.Models
             }
         }
 
+        [DisplayName("Ende der Session [Min.]")]
         public String DataExpiration
         {
             get
             {
-                return Configuration.usingSessionCashe ? MinutesLeft.ToString() : "N/A";
+                return Configuration.usingSessionCashe ? MinutesLeft.ToString(): "N/A";
             }
         }
 

@@ -13,7 +13,7 @@
     <legend>Ausleihen</legend>
     @if (Model.isAvaliable)
     {
-         @Html.ActionLink("Ausleihen dieses Buch", "Borrow", new { id = Model.id })
+         @Html.ActionLink("Dieses Buch ausleihen", "Borrow", new { id = Model.id })
     }
     else
     {
